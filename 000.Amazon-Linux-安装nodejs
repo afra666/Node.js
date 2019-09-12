@@ -1,0 +1,35 @@
+参考：https://docs.aws.amazon.com/zh_cn/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+在 Linux 实例上设置 Node.js
+1.
+使用 SSH 以 ec2-user 身份连接您的 Linux 实例。
+
+通过在命令行中键入以下内容，安装节点版本管理器 (nvm)。
+
+警告
+
+AWS 不控制以下代码。在运行之前，请务必验证其真实性和完整性。有关此代码的更多信息，请参阅 nvm GitHub 存储库。
+==========================================
+2.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+由于 nvm 可以安装多个版本的 Node.js 并允许您在各个版本之间切换，我们将使用 nvm 安装 Node.js。
+
+
+
+3.
+在命令行中键入以下内容来激活 nvm。
+
+. ~/.nvm/nvm.sh
+
+4.
+通过在命令行键入以下命令，使用 nvm 安装最新版本的 Node.js。
+
+nvm install node
+安装 Node.js 还会安装节点程序包管理器 (npm)，以便您根据需要安装其他模块。
+5.
+通过在命令行键入以下内容，测试 Node.js 已安装并正确运行。
+
+node -e "console.log('Running Node.js ' + process.version)"
+这将显示以下消息，其中显示正在运行的 Node.js 的版本。
+
+Running Node.js VERSION
+
