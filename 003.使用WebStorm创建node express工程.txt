@@ -1,3 +1,6 @@
+1.创建选项：
 option:
   Template:EJS
   CSS:LESS
+2.运行选项
+  www.js
