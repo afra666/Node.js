@@ -1,0 +1,3 @@
+option:
+  Template:EJS
+  CSS:LESS
