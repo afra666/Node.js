@@ -1,0 +1,17 @@
+windows 系统
+1.查看是否安装cnpm：
+cnpm -v
+
+如果显示错误则需要安装cnpm：
+npm install cnpm -g --registry=https://registry.npm.taobao.org
+
+2.然后安装三个Nodejs驱动
+cnpm i express mysql multer
+提示成功安装3packages
+
+3.查看express版本
+现在命令行输入
+node
+进入node命令下，再输入
+require("express");
+出现蓝色字即表示安装成功
