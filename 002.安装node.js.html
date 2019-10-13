@@ -1,3 +1,4 @@
+===============1.安装nodejs安装包=====================
 1.nodejs.cn下载
 2.安装
 3.常用命令
@@ -15,6 +16,56 @@ console.log("Hello world !");
 4.运行hello world
 node "D:\Program Files\jqm\wp05\hello.js"
 
+===============2.安装express框架=====================
+windows下安装express
+2019年3月10日 admin  1 条评论
+备注：安装express之前确保电脑上以及安装了node.js。
+
+首先打开cmd命令提示框。
+
+第一步：安装express
+
+执行命令：npm install -g express-generator 
+
+提示:请务必操作这一步,否则创建express项目的时候会提示express命令没有找到；
+
+第二步:执行 npm install -g express
+
+第三步:执行express -V      //此步骤是查看express版本已确定express安装成功（注意“V”是大写）
+
+（以上express环境已经安装好）;
+
+接下来开始创建express项目！
+
+第一步：执行 express myapp（项目文件名可以根据自己喜好命名，此处我所以命名）;
+
+第二步：进入你的项目执行命令: cd myapp;
+
+第三步：在你的项目的目录下执行 npm install    //此命令是安装express项目的依赖包
+
+
+=====
+//express_demo.js 文件
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello World1234');
+})
+
+var server = app.listen(8080, function () {
+
+    var host = server.address().address
+    var port = server.address().port
+
+    console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+})
+=====
+执行方法：先进入文件夹，然后node express_demo.js
+第四步：启动你的项目,执行 npm start；
+
+第五步：打开你的浏览器,在地址栏中输入:   http://127.0.0.1:端口号  就可以看到:express的欢迎信息 。
 ==================================cnpm等其他工具
 windows 系统
 1.查看是否安装cnpm：
